@@ -1,7 +1,23 @@
-$font-stack:    Open Sans, sans-serif;
-$primary-color: #333;
+// Reset
+@import "./reset.scss";
+
+// Base
+$font-stack: Open Sans, sans-serif;
+$primary-color: #000;
+$secondary-color: #fff;
+// @import "./animations.scss";
+// @import "./mixins.scss";
+
+
+// Component
 
 body {
-  font: 100% $font-stack;
+  font-family: $font-stack;
   color: $primary-color;
 }
+
+.bold {
+  font-weight: 700;
+}
+
+// Layout
