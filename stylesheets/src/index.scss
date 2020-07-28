@@ -1,20 +1,10 @@
-// Reset
-@import "./reset.scss";
-
 // Base
-$font-stack: Open Sans, sans-serif;
-$primary-color: #000;
-$secondary-color: #fff;
-// @import "./mixins.scss";
-
-body {
-  font-family: $font-stack;
-  color: $primary-color;
-}
-
-// Component
-
-
+@import "./base/mixins.scss";
+@import "./base/reset.scss";
+@import "./base/base.scss";
 
 // Layout
-@import "./layout.scss";
+@import "./base/layout.scss";
+
+// Component
+@import "./component/tabs-menu.scss";
