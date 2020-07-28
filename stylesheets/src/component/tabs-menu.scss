@@ -1,5 +1,33 @@
+$tab-width: 182px;
+$tab-height: 38px;
+
 .tabs-menu {
   @include testbdr(red);
+  display: flex;
+  justify-content: center;
+
+  li {
+    width: $tab-width;
+    height: $tab-height;
+
+    color: $black;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: $tab-height;
+
+    &:nth-child(2) {
+      border-left: 1px solid $black;
+      border-right: 1px solid $black;
+    }
+
+    &.active {
+      color: $white;
+      background-color: $black;
+    }
+  }
 
   @media screen and (max-width: 767px) {
     display: none;

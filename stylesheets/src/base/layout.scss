@@ -1,7 +1,25 @@
-#component {
-  @include testbdr(red);
+#container {
+  display: flex;
+  justify-content: center;
+
+  height: 500px;
+  padding-top: 75px;
 
   @media screen and (max-width: 767px) {
-    @include testbdr(blue);
+    height: auto;
+    padding-top: 0px;
+  }
+
+  #component {
+    @include testbdr(red);
+    width: 700px;
+
+    display: flex;
+    flex-direction: column;
+  
+    @media screen and (max-width: 767px) {
+      @include testbdr(blue);
+      width: 100%;
+    }
   }
 }

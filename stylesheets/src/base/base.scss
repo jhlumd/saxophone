@@ -1,6 +1,7 @@
 $font-stack: Open Sans, sans-serif;
-$primary-color: #000;
-$secondary-color: #fff;
+$black: #000;
+$grey: #323232;
+$white: #fff;
 
 // Set box model to border-box.
 // Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
@@ -18,5 +19,6 @@ html {
 
 body {
   font-family: $font-stack;
-  color: $primary-color;
+  color: $grey;
+  font-size: 13px;
 }
