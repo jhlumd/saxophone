@@ -1,25 +1,33 @@
 .content-container {
+  padding-top: 56px;
 
-  .accordion-button {
-    display: none;
-
-    @media screen and (max-width: 767px) {
-      display: block;
-      cursor: pointer;
-    }
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
   }
 
   .content {
     display: none;
-    -webkit-animation: fadeEffect 0.7s ease-in;
-    animation: fadeEffect 0.7s ease-in;
+    -webkit-animation: fadeEffect 1s ease-in;
+    animation: fadeEffect 1s ease-in;
+
+    text-align: center;
+    // letter-spacing: 0.3px; // fixme?
+    // line-height: 1.25;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      -webkit-animation: none;
+      animation: none;
+
+      // padding: 8px 20px 20px 20px;
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 2s ease-out;
+    }
 
     &.active {
       display: block;
     }
-  }
-
-  @media screen and (max-width: 767px) {
-    display: block;
   }
 }

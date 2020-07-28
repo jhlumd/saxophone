@@ -1,0 +1,35 @@
+$accordion-height: 45px;
+$mobile-medium: 14px;
+
+.accordion-button {
+  display: none;
+  cursor: pointer;
+  height: $accordion-height;
+  padding: 0 20px 0 20px;
+  border-top: 1px solid $black;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  font-size: $mobile-medium;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: $accordion-height;
+
+  &:after {
+    content: "\002B";
+    color: $grey;
+    font-weight: 400;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  &.active:after {
+    content: "\2212";
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}

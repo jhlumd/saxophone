@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -68,37 +69,36 @@ html {
 
 body {
   color: #323232;
-  font-family: Open Sans, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
 }
 
 #container {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 500px;
-  padding-top: 75px;
+  padding: 75px 0 75px 0;
 }
 @media screen and (max-width: 767px) {
   #container {
     height: auto;
-    padding-top: 0px;
+    padding: 0 0 0 0;
   }
 }
 #container #component {
   border: 1px solid red;
-  width: 700px;
   display: flex;
   flex-direction: column;
+  width: 668px;
 }
 @media screen and (max-width: 767px) {
   #container #component {
-    border: 1px solid blue;
     width: 100%;
   }
 }
 
 .tabs {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
@@ -108,12 +108,11 @@ body {
   }
 }
 .tabs .tab-button {
-  width: 182px;
+  width: 185px;
   height: 38px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   line-height: 38px;
@@ -129,27 +128,102 @@ body {
   background-color: #000;
 }
 
-.content-container .accordion-button {
-  display: none;
+.content-container {
+  padding-top: 56px;
 }
 @media screen and (max-width: 767px) {
-  .content-container .accordion-button {
-    display: block;
-    cursor: pointer;
+  .content-container {
+    padding-top: 0;
   }
 }
 .content-container .content {
   display: none;
-  -webkit-animation: fadeEffect 0.7s ease-in;
-  animation: fadeEffect 0.7s ease-in;
+  -webkit-animation: fadeEffect 1s ease-in;
+  animation: fadeEffect 1s ease-in;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .content-container .content {
+    display: block;
+    -webkit-animation: none;
+    animation: none;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease-out;
+  }
 }
 .content-container .content.active {
   display: block;
 }
+
+.accordion-button {
+  display: none;
+  cursor: pointer;
+  height: 45px;
+  padding: 0 20px 0 20px;
+  border-top: 1px solid #000;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 45px;
+}
+.accordion-button:first-child {
+  border-top: none;
+}
+.accordion-button:after {
+  content: "+";
+  color: #323232;
+  font-weight: 400;
+  float: right;
+  margin-left: 5px;
+}
+.accordion-button.active:after {
+  content: "−";
+}
 @media screen and (max-width: 767px) {
-  .content-container {
+  .accordion-button {
     display: block;
   }
+}
+
+.material-list {
+  display: flex;
+  justify-content: center;
+}
+.material-list li {
+  padding: 0 30px 0 30px;
+}
+@media screen and (max-width: 767px) {
+  .material-list li {
+    padding: 0 10px 0 10px;
+  }
+}
+.material-list li .percentage {
+  font-size: 48px;
+}
+@media screen and (max-width: 767px) {
+  .material-list li .percentage {
+    font-size: 38px;
+  }
+}
+.material-list li .material-name {
+  font-size: 21px;
+}
+@media screen and (max-width: 767px) {
+  .material-list li .material-name {
+    font-size: 14px;
+  }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  width: 45px;
+  border: 0;
+  border-top: 1px solid #323232;
+  margin: 25px auto 30px auto;
+  padding: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

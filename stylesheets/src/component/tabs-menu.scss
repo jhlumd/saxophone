@@ -1,8 +1,9 @@
-$tab-width: 182px;
+$tab-width: 185px;
 $tab-height: 38px;
 
+$medium: 18px;
+
 .tabs {
-  @include testbdr(red);
   display: flex;
   justify-content: center;
 
@@ -17,10 +18,10 @@ $tab-height: 38px;
   
     font-size: $medium;
     font-weight: 700;
-    letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     line-height: $tab-height;
+    // letter-spacing: 2px; // fixme ??
 
     color: $black;
     transition: 0.3s ease-in;
@@ -30,7 +31,7 @@ $tab-height: 38px;
       border-right: 1px solid $black;
     }
 
-    // fixme cool hover wes bos
+    // fixme cool hover?
     &:hover {
       // color: $white;
       // background-color: $grey;

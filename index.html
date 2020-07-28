@@ -6,6 +6,7 @@
   <title>Jaehyuk Lee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="author" content="Jaehyuk Lee">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:r,b" />
   <link rel="stylesheet" href="stylesheets/build/index.css" />
 </head>
 
@@ -15,14 +16,14 @@
     <div id="component">
 
       <ul class="tabs">
-        <li class="tab-button active" data-tab-number="1">Fit Guide</li>
-        <li class="tab-button" data-tab-number="2">Care</li>
-        <li class="tab-button" data-tab-number="3">Materials</li>
+        <li class="tab-button active" data-tab-number="0">Fit Guide</li>
+        <li class="tab-button" data-tab-number="1">Care</li>
+        <li class="tab-button" data-tab-number="2">Materials</li>
       </ul>
 
       <div class="content-container">
 
-        <div class="accordion-button">
+        <div class="accordion-button active" data-acc-number="0">
           Fit Guide
         </div>
         <div class="content active">
@@ -33,7 +34,7 @@
           leo arcu, vulputate vel commodo sit amet, ullamcorper varius dui.
         </div>
 
-        <div class="accordion-button">
+        <div class="accordion-button" data-acc-number="1">
           Care
         </div>
         <div class="content">
@@ -45,37 +46,38 @@
           nibh. Phasellus elit erat, scelerisque sed volutpat non, interdum vitae urna.
         </div>
 
-        <div class="accordion-button">
+        <div class="accordion-button" data-acc-number="2">
           Materials
         </div>
         <div class="content">
-          <div class="inner-section-a">
-            <div class="material">
+          <ul class="material-list">
+            <li>
               <div class="percentage">
                 50%
               </div>
               <div class="material-name">
                 cashmere
               </div>
-            </div>
-            <div class="material">
+            </li>
+            <li>
               <div class="percentage">
                 46%
               </div>
               <div class="material-name">
-                cashmere
+                wool
               </div>
-            </div>
-            <div class="material">
+            </li>
+            <li>
               <div class="percentage">
                 4%
               </div>
               <div class="material-name">
                 modal
               </div>
-            </div>
-          </div>
-          <div class="inner-section-b">
+            </li>
+          </ul>
+          <hr>
+          <div class="text-content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nibh arcu, ultricies nec purus quis, consequat luctus
             orci. Sed non mi nisi. Donec vulputate erat odio, eget lacinia lectus accumsan sed. Phasellus diam lorem, ullamcorper
             quis velit a, ultricies facilisis turpis. Sed laoreet efficitur odio, ut consequat arcu iaculis non. Quisque lectus

@@ -1,24 +1,27 @@
+$container-height: 500px;
+$component-width: 668px;
+
 #container {
+  @include testbdr(red);
   display: flex;
   justify-content: center;
 
-  height: 500px;
-  padding-top: 75px;
+  height: $container-height;
+  padding: 75px 0 75px 0;
 
   @media screen and (max-width: 767px) {
     height: auto;
-    padding-top: 0px;
+    padding: 0 0 0 0;
   }
 
   #component {
     @include testbdr(red);
-    width: 700px;
-
     display: flex;
     flex-direction: column;
+    
+    width: $component-width;
   
     @media screen and (max-width: 767px) {
-      @include testbdr(blue);
       width: 100%;
     }
   }

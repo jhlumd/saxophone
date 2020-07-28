@@ -1,5 +1,7 @@
+// Mixins and keyframes
+@import "./base/mixins-animations.scss";
+
 // Base
-@import "./base/mixins_animations.scss";
 @import "./base/reset.scss";
 @import "./base/base.scss";
 
@@ -9,3 +11,5 @@
 // Component
 @import "./component/tabs-menu.scss";
 @import "./component/content.scss";
+@import "./component/accordion-button.scss";
+@import "./component/materials.scss";
