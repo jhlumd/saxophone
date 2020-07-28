@@ -1,0 +1,25 @@
+.content-container {
+
+  .accordion-button {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    display: none;
+    -webkit-animation: fadeEffect 0.7s ease-in;
+    animation: fadeEffect 0.7s ease-in;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}

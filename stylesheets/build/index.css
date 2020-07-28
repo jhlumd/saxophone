@@ -1,3 +1,19 @@
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -51,8 +67,8 @@ html {
 }
 
 body {
-  font-family: Open Sans, sans-serif;
   color: #323232;
+  font-family: Open Sans, sans-serif;
   font-size: 13px;
 }
 
@@ -81,33 +97,58 @@ body {
   }
 }
 
-.tabs-menu {
+.tabs {
   border: 1px solid red;
   display: flex;
   justify-content: center;
 }
-.tabs-menu li {
+@media screen and (max-width: 767px) {
+  .tabs {
+    display: none;
+  }
+}
+.tabs .tab-button {
   width: 182px;
   height: 38px;
-  color: #000;
+  cursor: pointer;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   line-height: 38px;
+  color: #000;
+  transition: 0.3s ease-in;
 }
-.tabs-menu li:nth-child(2) {
+.tabs .tab-button:nth-child(2) {
   border-left: 1px solid #000;
   border-right: 1px solid #000;
 }
-.tabs-menu li.active {
+.tabs .tab-button.active {
   color: #fff;
   background-color: #000;
 }
+
+.content-container .accordion-button {
+  display: none;
+}
 @media screen and (max-width: 767px) {
-  .tabs-menu {
-    display: none;
+  .content-container .accordion-button {
+    display: block;
+    cursor: pointer;
+  }
+}
+.content-container .content {
+  display: none;
+  -webkit-animation: fadeEffect 0.7s ease-in;
+  animation: fadeEffect 0.7s ease-in;
+}
+.content-container .content.active {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .content-container {
+    display: block;
   }
 }
 

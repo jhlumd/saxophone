@@ -1,16 +1,20 @@
 $tab-width: 182px;
 $tab-height: 38px;
 
-.tabs-menu {
+.tabs {
   @include testbdr(red);
   display: flex;
   justify-content: center;
 
-  li {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  .tab-button {
     width: $tab-width;
     height: $tab-height;
-
-    color: $black;
+    cursor: pointer;
+  
     font-size: $medium;
     font-weight: 700;
     letter-spacing: 1px;
@@ -18,18 +22,23 @@ $tab-height: 38px;
     text-align: center;
     line-height: $tab-height;
 
+    color: $black;
+    transition: 0.3s ease-in;
+
     &:nth-child(2) {
       border-left: 1px solid $black;
       border-right: 1px solid $black;
+    }
+
+    // fixme cool hover wes bos
+    &:hover {
+      // color: $white;
+      // background-color: $grey;
     }
 
     &.active {
       color: $white;
       background-color: $black;
     }
-  }
-
-  @media screen and (max-width: 767px) {
-    display: none;
   }
 }
