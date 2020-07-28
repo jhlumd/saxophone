@@ -1,0 +1,7 @@
+#component {
+  border: 1px solid red;
+
+  @media screen and (max-width: 767px) {
+    border: 1px solid blue;
+  }
+}

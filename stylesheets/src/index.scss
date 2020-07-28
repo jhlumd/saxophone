@@ -5,19 +5,16 @@
 $font-stack: Open Sans, sans-serif;
 $primary-color: #000;
 $secondary-color: #fff;
-// @import "./animations.scss";
 // @import "./mixins.scss";
-
-
-// Component
 
 body {
   font-family: $font-stack;
   color: $primary-color;
 }
 
-.bold {
-  font-weight: 700;
-}
+// Component
+
+
 
 // Layout
+@import "./layout.scss";
