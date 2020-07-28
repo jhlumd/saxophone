@@ -50,6 +50,7 @@ function onAccClick(e) {
     const prevAccNum = parseInt(clickedAcc.dataset.accNumber);
     const prevContent = contents[prevAccNum];
     prevContent.classList.remove("active");
+    prevContent.style.maxHeight = null;
   } else {
     const prevAcc = document.querySelector(".accordion-button.active");
     if (prevAcc) {
@@ -60,6 +61,7 @@ function onAccClick(e) {
       const prevAccNum = parseInt(prevAcc.dataset.accNumber);
       const prevContent = contents[prevAccNum];
       prevContent.classList.remove("active");
+      prevContent.style.maxHeight = null;
 
       // Also update large screen tab to keep in sync
       const prevTabButton = tabButtons[prevAccNum];
