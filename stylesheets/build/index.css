@@ -74,7 +74,6 @@ body {
 }
 
 #container {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 500px;
@@ -87,9 +86,6 @@ body {
   }
 }
 #container #component {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
   width: 668px;
 }
 @media screen and (max-width: 767px) {
@@ -108,24 +104,28 @@ body {
   }
 }
 .tabs .tab-button {
-  width: 185px;
-  height: 38px;
   cursor: pointer;
+  height: 38px;
+  line-height: 38px;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 185px;
   text-align: center;
-  line-height: 38px;
   color: #000;
   transition: 0.3s ease-in;
 }
-.tabs .tab-button:nth-child(2) {
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+.tabs .tab-button:hover {
+  color: #fff;
+  text-shadow: 1px 1px 5px #323232;
 }
 .tabs .tab-button.active {
   color: #fff;
   background-color: #000;
+}
+.tabs .tab-button:nth-child(2) {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .content-container {
@@ -138,9 +138,9 @@ body {
 }
 .content-container .content {
   display: none;
+  text-align: center;
   -webkit-animation: fadeEffect 1s ease-in;
   animation: fadeEffect 1s ease-in;
-  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .content-container .content {
@@ -148,9 +148,9 @@ body {
     -webkit-animation: none;
     animation: none;
     padding: 0 20px;
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 2s ease-out;
+    max-height: 0;
+    transition: max-height 1s ease-out;
   }
 }
 .content-container .content.active {
@@ -158,15 +158,20 @@ body {
 }
 
 .accordion-button {
-  display: none;
   cursor: pointer;
   height: 45px;
-  padding: 0 20px 0 20px;
-  border-top: 1px solid #000;
+  line-height: 45px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 45px;
+  padding: 0 20px 0 20px;
+  border-top: 1px solid #000;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .accordion-button {
+    display: block;
+  }
 }
 .accordion-button:first-child {
   border-top: none;
@@ -180,11 +185,6 @@ body {
 }
 .accordion-button.active:after {
   content: "−";
-}
-@media screen and (max-width: 767px) {
-  .accordion-button {
-    display: block;
-  }
 }
 
 .material-list {

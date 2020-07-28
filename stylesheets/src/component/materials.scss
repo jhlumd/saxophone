@@ -5,12 +5,7 @@ $mobile-xlarge: 38px; // fixme
 .material-list {
   display: flex;
   justify-content: center;
-
-  // letter-spacing: normal;
-
-  @media screen and (max-width: 767px) {
-    // display: block;
-  }
+  // letter-spacing: normal; // fixme
 
   li {
     padding: 0 30px 0 30px;
@@ -31,7 +26,7 @@ $mobile-xlarge: 38px; // fixme
       font-size: $large;
 
       @media screen and (max-width: 767px) {
-        font-size: $mobile-medium;
+        font-size: $mobile-large;
       }
     }
   }
@@ -47,6 +42,6 @@ hr {
   padding: 0;
 
   @media screen and (max-width: 767px) {
-    // display: block;
+    // margin: 25px auto 30px auto; // fixme
   }
 }

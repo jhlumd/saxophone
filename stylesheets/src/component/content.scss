@@ -7,23 +7,23 @@
 
   .content {
     display: none;
-    -webkit-animation: fadeEffect 1s ease-in;
-    animation: fadeEffect 1s ease-in;
-
     text-align: center;
     // letter-spacing: 0.3px; // fixme?
-    // line-height: 1.25;
+    // line-height: 1.25; // fixme
+
+    -webkit-animation: fadeEffect 1s ease-in;
+    animation: fadeEffect 1s ease-in;
 
     @media screen and (max-width: 767px) {
       display: block;
       -webkit-animation: none;
       animation: none;
 
-      // padding: 8px 20px 20px 20px;
+      // padding: 8px 20px 20px 20px; // fixme
       padding: 0 20px;
-      max-height: 0;
       overflow: hidden;
-      transition: max-height 2s ease-out;
+      max-height: 0;
+      transition: max-height 1s ease-out;
     }
 
     &.active {

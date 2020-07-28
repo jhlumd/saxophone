@@ -1,5 +1,10 @@
-@mixin testbdr($color) {
-  border: 1px solid $color;
+@mixin button($fz, $hgt) {
+  cursor: pointer;
+  height: $hgt;
+  line-height: $hgt;
+  font-size: $fz;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 @-webkit-keyframes fadeEffect {

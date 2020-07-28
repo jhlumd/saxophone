@@ -2,7 +2,6 @@ $container-height: 500px;
 $component-width: 668px;
 
 #container {
-  @include testbdr(red);
   display: flex;
   justify-content: center;
 
@@ -15,10 +14,6 @@ $component-width: 668px;
   }
 
   #component {
-    @include testbdr(red);
-    display: flex;
-    flex-direction: column;
-    
     width: $component-width;
   
     @media screen and (max-width: 767px) {

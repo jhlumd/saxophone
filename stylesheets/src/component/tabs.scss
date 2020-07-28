@@ -1,6 +1,5 @@
 $tab-width: 185px;
 $tab-height: 38px;
-
 $medium: 18px;
 
 .tabs {
@@ -12,34 +11,27 @@ $medium: 18px;
   }
 
   .tab-button {
-    width: $tab-width;
-    height: $tab-height;
-    cursor: pointer;
-  
-    font-size: $medium;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: $tab-height;
-    // letter-spacing: 2px; // fixme ??
+    @include button($medium, $tab-height);
 
+    width: $tab-width;
+    text-align: center;
     color: $black;
     transition: 0.3s ease-in;
+    // letter-spacing: 2px; // fixme ??
 
-    &:nth-child(2) {
-      border-left: 1px solid $black;
-      border-right: 1px solid $black;
-    }
-
-    // fixme cool hover?
     &:hover {
-      // color: $white;
-      // background-color: $grey;
+      color: $white;
+      text-shadow: 1px 1px 5px $grey;
     }
 
     &.active {
       color: $white;
       background-color: $black;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid $black;
+      border-right: 1px solid $black;
     }
   }
 }
