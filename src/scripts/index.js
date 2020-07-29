@@ -1,11 +1,31 @@
-// const Animal = require("./animal");
-const Dog = require("./dog");
+const TabAccordionComponent = require("./tab_accordion");
 
-const liesel = new Dog("Liesel");
-liesel.bark();
-liesel.sayHello();
-console.log(liesel.coatColor);
-liesel.coatColor = "yellow";
-console.log(liesel.coatColor);
-const doggy = new Dog("Jon", "brown");
-console.log(doggy.coatColor);
+// debounce function for window resize handling
+function debounce(func, wait, immediate) {
+  let timeout;
+  return function () {
+    const context = this,
+      args = arguments;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+let app;
+
+function start() {
+  app = new TabAccordionComponent(767);
+  app.initComponent();
+  app.handleResize();
+  const dbcHandleResize = debounce(app.handleResize, 250);
+  window.addEventListener("resize", dbcHandleResize);
+  window.addEventListener("orientationchange", dbcHandleResize);
+}
+
+start();

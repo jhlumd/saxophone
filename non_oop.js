@@ -20,7 +20,7 @@ function onTabClick(e) {
     prevTab.classList.remove("active");
 
     // Deactiveate previous content section
-    const prevTabNum = parseInt(prevTab.dataset.tabNumber);
+    const prevTabNum = parseInt(prevTab.dataset.buttonId);
     const prevContent = contents[prevTabNum];
     prevContent.classList.remove("active");
 
@@ -33,7 +33,7 @@ function onTabClick(e) {
   clickedTab.classList.add("active");
 
   // Activate clicked content
-  const clickedTabNum = parseInt(clickedTab.dataset.tabNumber);
+  const clickedTabNum = parseInt(clickedTab.dataset.buttonId);
   const clickedContent = contents[clickedTabNum];
   clickedContent.classList.add("active");
 
@@ -49,7 +49,7 @@ function onAccClick(e) {
     clickedAcc.classList.remove("active");
 
     // Deactive content section
-    const prevAccNum = parseInt(clickedAcc.dataset.accNumber);
+    const prevAccNum = parseInt(clickedAcc.dataset.buttonId);
     const prevContent = contents[prevAccNum];
     prevContent.classList.remove("active");
 
@@ -63,7 +63,7 @@ function onAccClick(e) {
       prevAcc.classList.remove("active");
 
       // Deactivate previous content section
-      const prevAccNum = parseInt(prevAcc.dataset.accNumber);
+      const prevAccNum = parseInt(prevAcc.dataset.buttonId);
       const prevContent = contents[prevAccNum];
       prevContent.classList.remove("active");
 
@@ -76,7 +76,7 @@ function onAccClick(e) {
     clickedAcc.classList.add("active");
 
     // Activate clicked content
-    const clickedAccNum = parseInt(clickedAcc.dataset.accNumber);
+    const clickedAccNum = parseInt(clickedAcc.dataset.buttonId);
     const clickedContent = contents[clickedAccNum];
     clickedContent.classList.add("active");
 
