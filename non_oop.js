@@ -98,15 +98,13 @@ function areAllInactive(nodeList) {
 }
 
 function handleResize() {
-  if (
-    !isLargeScreen &&
-    window.innerWidth > breakpoint &&
-    areAllInactive(tabButtons)
-  ) {
+  if (!isLargeScreen && window.innerWidth > breakpoint) {
     isLargeScreen = true;
-    tabButtons[0].classList.add("active");
-    accButtons[0].classList.add("active");
-    contents[0].classList.add("active");
+    if (areAllInactive(tabButtons)) {
+      tabButtons[0].classList.add("active");
+      accButtons[0].classList.add("active");
+      contents[0].classList.add("active");
+    }
   } else if (window.innerWidth <= breakpoint) {
     isLargeScreen = false;
   }
