@@ -154,7 +154,7 @@ body {
     animation: none;
     overflow: hidden;
     max-height: 0;
-    transition: 1s ease-out;
+    transition: 0.7s ease-out;
   }
 }
 .content-container .content.active {
