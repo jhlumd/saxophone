@@ -85,3 +85,39 @@ function onAccClick(e) {
     clickedTabButton.classList.add("active");
   }
 }
+
+// handle screen resize
+const breakpoint = 767;
+let isLargeScreen = window.innerWidth > breakpoint;
+
+function handleResize() {
+  if (window.innerWidth > breakpoint && !isLargeScreen) {
+    isLargeScreen = true;
+    tabButtons[0].classList.add("active");
+    accButtons[0].classList.add("active");
+    contents[0].classList.add("active");
+  } else if (window.innerWidth <= breakpoint) {
+    isLargeScreen = false;
+  }
+}
+
+function debounce(func, wait, immediate) {
+  let timeout;
+  return function () {
+    const context = this,
+      args = arguments;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+handleResize();
+const dbcHandleResize = debounce(handleResize, 250);
+window.addEventListener("resize", dbcHandleResize);
+window.addEventListener("orientationchange", dbcHandleResize);
