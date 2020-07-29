@@ -1,16 +1,17 @@
 // Tab buttons (on large screen):
 const tabButtons = document.querySelectorAll(".tab-button");
-tabButtons.forEach((tab) => tab.addEventListener("click", onTabClick));
-
 // Accordion buttons (on small screen):
 const accButtons = document.querySelectorAll(".accordion-button");
-accButtons.forEach((button) => button.addEventListener("click", onAccClick));
-
-// NodeList of all 3 content sections
+// All 3 content sections
 const contents = document.querySelectorAll(".content");
+
+tabButtons.forEach((tab) => tab.addEventListener("click", onTabClick));
+accButtons.forEach((acc) => acc.addEventListener("click", onAccClick));
 
 function onTabClick(e) {
   const clickedTab = e.target;
+
+  // Cannot deactivate all tabs when in large screen mode
   if (clickedTab.classList.contains("active")) return;
 
   const prevTab = document.querySelector(".tabs").querySelector(".active");
