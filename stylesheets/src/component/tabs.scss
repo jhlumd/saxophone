@@ -14,10 +14,10 @@ $medium: 18px;
     @include button($medium, $tab-height);
 
     width: $tab-width;
-    text-align: center;
     color: $black;
+    text-align: center;
+    letter-spacing: 2px;
     transition: 0.3s ease-in;
-    // letter-spacing: 2px; // fixme ??
 
     &:hover {
       color: $white;
