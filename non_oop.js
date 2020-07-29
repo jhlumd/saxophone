@@ -44,13 +44,13 @@ function onTabClick(e) {
 function onAccClick(e) {
   const clickedAcc = e.target;
   if (clickedAcc.classList.contains("active")) {
-    // Deactivate the open accordion (all are collapsed in small screen but
-    // large screen view keeps last opened tab)
+    // Deactivate the open accordion
     clickedAcc.classList.remove("active");
+
+    // Deactive content section
     const prevAccNum = parseInt(clickedAcc.dataset.accNumber);
     const prevContent = contents[prevAccNum];
     prevContent.classList.remove("active");
-    prevContent.style.maxHeight = null;
 
     // Also update the large screen tab to keep in sync
     const prevTabButton = tabButtons[prevAccNum];
@@ -65,7 +65,6 @@ function onAccClick(e) {
       const prevAccNum = parseInt(prevAcc.dataset.accNumber);
       const prevContent = contents[prevAccNum];
       prevContent.classList.remove("active");
-      prevContent.style.maxHeight = null;
 
       // Also update large screen tab to keep in sync
       const prevTabButton = tabButtons[prevAccNum];
@@ -79,8 +78,6 @@ function onAccClick(e) {
     const clickedAccNum = parseInt(clickedAcc.dataset.accNumber);
     const clickedContent = contents[clickedAccNum];
     clickedContent.classList.add("active");
-    // padding top and bottom = 28px
-    clickedContent.style.maxHeight = `${clickedContent.scrollHeight + 28}px`;
 
     //Also update large screen tab to keep in sync
     const clickedTabButton = tabButtons[clickedAccNum];
