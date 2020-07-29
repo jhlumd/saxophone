@@ -90,8 +90,19 @@ function onAccClick(e) {
 const breakpoint = 767;
 let isLargeScreen = window.innerWidth > breakpoint;
 
+function areAllInactive(nodeList) {
+  for (let i = 0; i < nodeList.length; i++) {
+    if (nodeList[i].classList.contains("active")) return false;
+  }
+  return true;
+}
+
 function handleResize() {
-  if (window.innerWidth > breakpoint && !isLargeScreen) {
+  if (
+    !isLargeScreen &&
+    window.innerWidth > breakpoint &&
+    areAllInactive(tabButtons)
+  ) {
     isLargeScreen = true;
     tabButtons[0].classList.add("active");
     accButtons[0].classList.add("active");
