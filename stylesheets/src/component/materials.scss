@@ -1,6 +1,6 @@
 $large: 21px;
 $xlarge: 50px;
-$mobile-xlarge: 38px; // fixme
+$mobile-xlarge: 32px;
 
 .material-list {
   display: flex;
@@ -13,7 +13,8 @@ $mobile-xlarge: 38px; // fixme
 
     @media screen and (max-width: 767px) {
       width: auto;
-      margin: 0 10px 0 10px;
+      margin: 0;
+      flex: 1;
     }
 
     .percentage {
@@ -44,6 +45,6 @@ hr {
   padding: 0;
 
   @media screen and (max-width: 767px) {
-    // margin: 25px auto 30px auto; // fixme
+    margin: 20px auto 20px auto;
   }
 }

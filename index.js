@@ -75,7 +75,8 @@ function onAccClick(e) {
     const clickedAccNum = parseInt(clickedAcc.dataset.accNumber);
     const clickedContent = contents[clickedAccNum];
     clickedContent.classList.add("active");
-    clickedContent.style.maxHeight = `${clickedContent.scrollHeight}px`;
+    // padding top and bottom = 28px
+    clickedContent.style.maxHeight = `${clickedContent.scrollHeight + 28}px`;
 
     //Also update large screen tab to keep in sync
     const clickedTabButton = tabButtons[clickedAccNum];
