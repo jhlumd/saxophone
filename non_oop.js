@@ -51,6 +51,10 @@ function onAccClick(e) {
     const prevContent = contents[prevAccNum];
     prevContent.classList.remove("active");
     prevContent.style.maxHeight = null;
+
+    // Also update the large screen tab to keep in sync
+    const prevTabButton = tabButtons[prevAccNum];
+    prevTabButton.classList.remove("active");
   } else {
     const prevAcc = document.querySelector(".accordion-button.active");
     if (prevAcc) {
