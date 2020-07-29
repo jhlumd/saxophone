@@ -11,6 +11,7 @@
     display: none;
     text-align: center;
     line-height: 1.2;
+    padding: 0 20px;
 
     -webkit-animation: fadeEffect 1s ease-in;
     animation: fadeEffect 1s ease-in;
@@ -20,7 +21,6 @@
       -webkit-animation: none;
       animation: none;
 
-      padding: 0 20px;
       overflow: hidden;
       max-height: 0;
       transition: 1s ease-out;
@@ -30,7 +30,8 @@
       display: block;
 
       @media screen and (max-width: 767px) {
-        padding: 8px 20px 20px 20px;
+        padding-top: 8px;
+        padding-bottom: 20px;
         max-height: calc(100vh - 45px * 3 - 2px - 28px);
       }
     }

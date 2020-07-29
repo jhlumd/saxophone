@@ -1,12 +1,12 @@
-// Tab buttons (large screen):
+// Tab buttons (on large screen):
 const tabButtons = document.querySelectorAll(".tab-button");
 tabButtons.forEach((tab) => tab.addEventListener("click", onTabClick));
 
-// Accordion buttons (small screen):
+// Accordion buttons (on small screen):
 const accButtons = document.querySelectorAll(".accordion-button");
 accButtons.forEach((button) => button.addEventListener("click", onAccClick));
 
-// NodeList of contents for the 2 functions below to close over
+// NodeList of all 3 content sections
 const contents = document.querySelectorAll(".content");
 
 function onTabClick(e) {

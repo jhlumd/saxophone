@@ -1,5 +1,5 @@
 $container-height: 500px;
-$component-width: 670px;
+$component-width: 710px;
 
 #container {
   display: flex;
@@ -10,7 +10,7 @@ $component-width: 670px;
 
   @media screen and (max-width: 767px) {
     height: auto;
-    padding: 0 0 0 0;
+    padding: 0;
   }
 
   #component {
